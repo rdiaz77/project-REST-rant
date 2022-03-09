@@ -5,7 +5,11 @@ const app = express()
 
 app.use('/places', require('./controller/places'))
 
-app.get('/', (req,res) => console.log('hello world'))
+app.get('/', (req,res) => {
+    
+    res.send('hello world')
+    
+})
 
 app.get('*', (req,res) =>{
     res.status(404).send(`
