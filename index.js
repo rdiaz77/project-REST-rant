@@ -7,7 +7,7 @@ app.use('/places', require('./controller/places'))
 
 app.get('/', (req,res) => {
     
-    res.send('hello world')
+    res.send('hello world -rest ran')
     
 })
 
