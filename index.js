@@ -19,8 +19,10 @@ app.get('*', (req,res) =>{
     res.render('error404')
 
 })
-// GET PLACES
-app.get('/', (req,res) =>{
+
+// GET /places
+
+app.get('/', (req, res) => {
     let places = [{
         name: 'H-Thai-ML',
         city: 'Seattle',
@@ -35,7 +37,7 @@ app.get('/', (req,res) =>{
         pic: 'http://placekitten.com/250/250'
       }]
     res.render('places/index', {places})
-})
+  })
 
 app.listen(process.env.PORT, () => console.log('awaken'))
 
