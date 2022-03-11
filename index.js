@@ -39,7 +39,4 @@ app.get('/', (req,res) =>{
 
 app.listen(process.env.PORT, () => console.log('awaken'))
 
-router.get('/', (req,res) => {
-    res.send('GET/places')
-})
-module.exports = router
+
