@@ -10,7 +10,7 @@ app.engine('jsx', require('express-react-views').createEngine())
 app.use(express.static('public'))
 
 //Controllers and routes
-app.use('/places', require('./controller/places'))
+app.use('/places', require('./controller/places')) // link server.js with controller/places.js
 
 
 app.get('/', (req,res) => {
