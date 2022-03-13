@@ -23,9 +23,9 @@ router.get('/', (req,res) => {
     res.render('places/index', {places})
 })
 
-// POST PLACES NEW
+// GET PLACES NEW
 
-router.get('/new', (req,res) =>{
+router.get('/new', (req,res) => {
   res.render('places/new')
 })
 
