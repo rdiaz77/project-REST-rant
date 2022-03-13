@@ -8,8 +8,12 @@ const app = express()
 app.set('view engine', 'jsx')
 app.engine('jsx', require('express-react-views').createEngine())
 app.use(express.static('public'))
+app.use(express.urlencoded({ extended: true }))
+
+
 
 //Controllers and routes
+
 app.use('/places', require('./controller/places')) // link server.js with controller/places.js
 
 
@@ -23,6 +27,7 @@ app.get('*', (req,res) =>{
     res.render('error404')
 
 })
+
 
 
 app.listen(process.env.PORT, () => console.log('awaken'))
