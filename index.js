@@ -1,14 +1,18 @@
+// Modules and Globals
+const methodOverride = require('method-override')
 require('dotenv').config()
 const express = require('express');
 const router = require('./controller/places');
 const app = express()
 
-//Express settings
 
+//Express settings
+app.use(methodOverride('_method'))
 app.set('view engine', 'jsx')
 app.engine('jsx', require('express-react-views').createEngine())
 app.use(express.static('public'))
 app.use(express.urlencoded({ extended: true }))
+
 
 
 
