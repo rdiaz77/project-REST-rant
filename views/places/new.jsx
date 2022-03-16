@@ -83,7 +83,7 @@ function new_form(){
                         <input className ='form-control' id="cuisine" name="cuisine" required />
                     </div>
                     <div>
-                    <input className="btn btn-primary" type="submit" value="Add New Place"/>
+                        <input className="btn btn-primary" type="submit" value="Add New Place"/>
                     </div>
 
                 </form>
