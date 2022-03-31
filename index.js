@@ -6,12 +6,13 @@ const router = require('./controller/places');
 const app = express()
 
 
-//Express settings
-app.use(methodOverride('_method'))
+// Express Settings
+app.set('views', __dirname + '/views')
 app.set('view engine', 'jsx')
 app.engine('jsx', require('express-react-views').createEngine())
 app.use(express.static('public'))
 app.use(express.urlencoded({ extended: true }))
+app.use(methodOverride('_method'))
 
 
 
@@ -20,16 +21,12 @@ app.use(express.urlencoded({ extended: true }))
 
 app.use('/places', require('./controller/places')) // link server.js with controller/places.js
 
-
 app.get('/', (req,res) => {
-    
     res.render('home')
-    
 })
 
 app.get('*', (req,res) =>{
     res.render('error404')
-
 })
 
 
